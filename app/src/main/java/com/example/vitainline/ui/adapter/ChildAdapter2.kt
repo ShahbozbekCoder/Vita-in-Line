@@ -1,4 +1,4 @@
-package com.example.vitainline.adapter
+package com.example.vitainline.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vitainline.R
-import com.example.vitainline.datas.ChildItem2
+import com.example.vitainline.data.models.ChildItem2
 
 class ChildAdapter2(private val childList: ArrayList<ChildItem2>): RecyclerView.Adapter<ChildAdapter2.CHilViewHolder>() {
 

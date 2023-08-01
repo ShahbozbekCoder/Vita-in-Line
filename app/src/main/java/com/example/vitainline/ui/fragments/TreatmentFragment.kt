@@ -8,11 +8,11 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitainline.R
-import com.example.vitainline.adapter.ParentAdapter
+import com.example.vitainline.ui.adapter.ParentAdapter
 import com.example.vitainline.databinding.FragmentTreatmenBinding
-import com.example.vitainline.datas.ChildItem
-import com.example.vitainline.datas.ParentItem
-import com.example.vitainline.listener.NestedRecyclerViewListener
+import com.example.vitainline.data.models.ChildItem
+import com.example.vitainline.data.models.ParentItem
+import com.example.vitainline.ui.listener.NestedRecyclerViewListener
 
 class TreatmentFragment : Fragment() {
 
@@ -66,7 +66,7 @@ class TreatmentFragment : Fragment() {
             layoutManager = LinearLayoutManager(requireContext())
             adapter = parentAdapter
         }
-        parentAdapter.setListener(object :NestedRecyclerViewListener{
+        parentAdapter.setListener(object : NestedRecyclerViewListener {
             override fun onItemClick(position: Int) {
                 findNavController().navigate(R.id.action_treatmentFragment_to_bottomSheetDialog)
             }

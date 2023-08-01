@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitainline.R
-import com.example.vitainline.adapter.ParentAdapter2
+import com.example.vitainline.ui.adapter.ParentAdapter2
 import com.example.vitainline.databinding.FragmentRecomendationBinding
-import com.example.vitainline.datas.ChildItem2
-import com.example.vitainline.datas.ParentItem2
+import com.example.vitainline.data.models.ChildItem2
+import com.example.vitainline.data.models.ParentItem2
 
 class RecommendationFragment : Fragment() {
 

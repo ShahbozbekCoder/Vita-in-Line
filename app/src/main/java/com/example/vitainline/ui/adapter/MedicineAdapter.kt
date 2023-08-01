@@ -1,4 +1,4 @@
-package com.example.vitainline.adapter
+package com.example.vitainline.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vitainline.databinding.ItemLayoutMedicineBinding
-import com.example.vitainline.datas.MedicineItem
-import com.example.vitainline.listener.NestedRecyclerViewListener
+import com.example.vitainline.data.models.MedicineItem
+import com.example.vitainline.ui.listener.NestedRecyclerViewListener
 
 class MedicineAdapter : ListAdapter<MedicineItem, MedicineAdapter.ItemViewHolder>(MyDiffUtil()) {
 
@@ -43,13 +43,13 @@ class MedicineAdapter : ListAdapter<MedicineItem, MedicineAdapter.ItemViewHolder
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): MedicineAdapter.ItemViewHolder {
+    ): ItemViewHolder {
         val binding =
             ItemLayoutMedicineBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return ItemViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: MedicineAdapter.ItemViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ItemViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
 }

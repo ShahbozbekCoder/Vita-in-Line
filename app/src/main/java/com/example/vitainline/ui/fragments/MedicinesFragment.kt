@@ -8,10 +8,10 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.vitainline.R
-import com.example.vitainline.adapter.MedicineAdapter
+import com.example.vitainline.ui.adapter.MedicineAdapter
 import com.example.vitainline.databinding.FragmentMedicinesBinding
-import com.example.vitainline.datas.MedicineItem
-import com.example.vitainline.listener.NestedRecyclerViewListener
+import com.example.vitainline.data.models.MedicineItem
+import com.example.vitainline.ui.listener.NestedRecyclerViewListener
 
 
 class MedicinesFragment : Fragment() {

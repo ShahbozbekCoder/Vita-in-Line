@@ -1,4 +1,4 @@
-package com.example.vitainline.adapter
+package com.example.vitainline.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -7,15 +7,15 @@ import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.vitainline.R
-import com.example.vitainline.datas.ParentItem2
-import com.example.vitainline.listener.NestedRecyclerViewListener
+import com.example.vitainline.data.models.ParentItem
+import com.example.vitainline.ui.listener.NestedRecyclerViewListener
 
-class ParentAdapter2(private val parentList: ArrayList<ParentItem2>): RecyclerView.Adapter<ParentAdapter2.MyViewHolder>(){
+class ParentAdapter(private val parentList: List<ParentItem>): RecyclerView.Adapter<ParentAdapter.MyViewHolder>(){
 
     private var recyclerViewListener: NestedRecyclerViewListener? = null
     inner class MyViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
-        val nameMedicine : TextView = itemView.findViewById(R.id.textViewRecommend)
-        val childRecyclerView: RecyclerView = itemView.findViewById(R.id.rcRecommend)
+        val nameMedicine : TextView = itemView.findViewById(R.id.textViewMedicineName1)
+        val childRecyclerView: RecyclerView = itemView.findViewById(R.id.rc1)
         init {
             itemView.setOnClickListener {
                 recyclerViewListener?.onItemClick(adapterPosition)
@@ -23,8 +23,12 @@ class ParentAdapter2(private val parentList: ArrayList<ParentItem2>): RecyclerVi
         }
     }
 
+    fun setListener(listener: NestedRecyclerViewListener){
+        recyclerViewListener = listener
+    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_layout2,parent,false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.list_layout,parent,false)
         return MyViewHolder(view)
     }
 
@@ -34,8 +38,8 @@ class ParentAdapter2(private val parentList: ArrayList<ParentItem2>): RecyclerVi
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val parentItem  = parentList[position]
-        val childAdapter = ChildAdapter2(parentItem.times)
-        holder.nameMedicine.text = parentItem.recommend
+        val childAdapter = ChildAdapter(parentItem.order)
+        holder.nameMedicine.text = parentItem.medicine
         holder.childRecyclerView.setHasFixedSize(true)
         holder.childRecyclerView.layoutManager = LinearLayoutManager(holder.itemView.context)
         holder.childRecyclerView.adapter = childAdapter

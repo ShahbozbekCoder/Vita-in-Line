@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.vitainline.databinding.FragmentAboutMedicinesBinding
-import com.example.vitainline.datas.MedicineItem
+import com.example.vitainline.data.models.MedicineItem
 
 class AboutMedicinesFragment : Fragment() {
 
