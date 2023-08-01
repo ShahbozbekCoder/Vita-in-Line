@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="com.example.vitainline.fragments.SplashScreenFragment"
+        android:name="com.example.vitainline.ui.fragments.SplashScreenFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_splash_screen" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.example.vitainline.fragments.SignUpFragment"
+        android:name="com.example.vitainline.ui.fragments.signUp.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -28,7 +28,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.vitainline.fragments.RegisterFragment"
+        android:name="com.example.vitainline.ui.fragments.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -37,7 +37,7 @@
     </fragment>
     <fragment
         android:id="@+id/mainPageFragment"
-        android:name="com.example.vitainline.fragments.MainPageFragment"
+        android:name="com.example.vitainline.ui.fragments.MainPageFragment"
         android:label="fragment_main_page"
         tools:layout="@layout/fragment_main_page" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/treatmentFragment"
-        android:name="com.example.vitainline.fragments.TreatmentFragment"
+        android:name="com.example.vitainline.ui.fragments.TreatmentFragment"
         android:label="fragment_treatmen"
         tools:layout="@layout/fragment_treatmen" >
         <action
@@ -64,17 +64,17 @@
     </fragment>
     <fragment
         android:id="@+id/treatmentHistoryFragment"
-        android:name="com.example.vitainline.fragments.TreatmentHistoryFragment"
+        android:name="com.example.vitainline.ui.fragments.TreatmentHistoryFragment"
         android:label="TreatmentHistoryFragment"
         tools:layout="@layout/fragment_treatment_history"/>
     <dialog
         android:id="@+id/bottomSheetDialog"
-        android:name="com.example.vitainline.fragments.BottomSheetDialog"
+        android:name="com.example.vitainline.ui.fragments.BottomSheetDialog"
         android:label="BottomSheetDialog"
         tools:layout="@layout/bottom_sheet_layout"/>
     <fragment
         android:id="@+id/recommendationFragment"
-        android:name="com.example.vitainline.fragments.RecommendationFragment"
+        android:name="com.example.vitainline.ui.fragments.RecommendationFragment"
         android:label="RecommendationFragment"
         tools:layout="@layout/fragment_recomendation">
         <action
@@ -83,12 +83,12 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentRecHistoryFragment"
-        android:name="com.example.vitainline.fragments.FragmentRecHistoryFragment"
+        android:name="com.example.vitainline.ui.fragments.FragmentRecHistoryFragment"
         android:label="FragmentRecHistoryFragment"
         tools:layout="@layout/fragment_rec_history"/>
     <fragment
         android:id="@+id/medicinesFragment"
-        android:name="com.example.vitainline.fragments.MedicinesFragment"
+        android:name="com.example.vitainline.ui.fragments.MedicinesFragment"
         android:label="fragment_medicines"
         tools:layout="@layout/fragment_medicines" >
         <action
@@ -100,7 +100,7 @@
     </fragment>
     <fragment
         android:id="@+id/aboutMedicinesFragment"
-        android:name="com.example.vitainline.fragments.AboutMedicinesFragment"
+        android:name="com.example.vitainline.ui.fragments.AboutMedicinesFragment"
         android:label="fragment_about_medicines"
         tools:layout="@layout/fragment_about_medicines" />
 </navigation>

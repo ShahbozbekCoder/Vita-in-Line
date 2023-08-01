@@ -1,4 +1,4 @@
-package com.example.vitainline.fragments
+package com.example.vitainline.ui.fragments
 
 import android.app.DatePickerDialog
 import android.os.Bundle

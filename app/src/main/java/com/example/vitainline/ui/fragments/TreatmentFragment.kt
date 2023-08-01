@@ -1,4 +1,4 @@
-package com.example.vitainline.fragments
+package com.example.vitainline.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
