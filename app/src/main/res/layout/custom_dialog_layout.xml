@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="8dp"
+            android:text="Viloyatni tanlang"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/teal_100"
+            android:clickable="false"
+            android:padding="8dp">
+
+            <RadioButton
+                android:id="@+id/andijon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Andijon viloyati" />
+
+            <RadioButton
+                android:id="@+id/qoraqalpoq"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Qoraqalpog'iston respublikasi" />
+
+            <RadioButton
+                android:id="@+id/namangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Namangan viloyati" />
+
+            <RadioButton
+                android:id="@+id/fargona"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Farg'ona viloyati" />
+
+            <RadioButton
+                android:id="@+id/toshken"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Toshkent viloyati" />
+
+            <RadioButton
+                android:id="@+id/sirdaryo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sirdaryo viloyati" />
+
+            <RadioButton
+                android:id="@+id/jizzax"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Jizzax viloyati" />
+
+            <RadioButton
+                android:id="@+id/samarqand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Samarqand viloyati" />
+
+            <RadioButton
+                android:id="@+id/qashqadaryo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Qashqadaryo viloyati" />
+
+            <RadioButton
+                android:id="@+id/surxondaryo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Surxandaryo viloyati" />
+
+            <RadioButton
+                android:id="@+id/buxoro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buxoro viloyati" />
+
+            <RadioButton
+                android:id="@+id/xorazm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xorazm viloyati" />
+
+            <RadioButton
+                android:id="@+id/navoiy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Navoiy viloyati" />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ok" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cancel" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.example.vitainline.fragments.SplashScreenFragment"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreenFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.vitainline.fragments.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_signUpFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.vitainline.fragments.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_mainPageFragment"
+            app:destination="@id/mainPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainPageFragment"
+        android:name="com.example.vitainline.fragments.MainPageFragment"
+        android:label="fragment_main_page"
+        tools:layout="@layout/fragment_main_page" >
+        <action
+            android:id="@+id/action_mainPageFragment_to_treatmentFragment"
+            app:destination="@id/treatmentFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_recommendationFragment"
+            app:destination="@id/recommendationFragment" />
+        <action
+            android:id="@+id/action_mainPageFragment_to_medicinesFragment"
+            app:destination="@id/medicinesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/treatmentFragment"
+        android:name="com.example.vitainline.fragments.TreatmentFragment"
+        android:label="fragment_treatmen"
+        tools:layout="@layout/fragment_treatmen" >
+        <action
+            android:id="@+id/action_treatmentFragment_to_treatmentHistoryFragment"
+            app:destination="@id/treatmentHistoryFragment" />
+        <action
+            android:id="@+id/action_treatmentFragment_to_bottomSheetDialog"
+            app:destination="@id/bottomSheetDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/treatmentHistoryFragment"
+        android:name="com.example.vitainline.fragments.TreatmentHistoryFragment"
+        android:label="TreatmentHistoryFragment"
+        tools:layout="@layout/fragment_treatment_history"/>
+    <dialog
+        android:id="@+id/bottomSheetDialog"
+        android:name="com.example.vitainline.fragments.BottomSheetDialog"
+        android:label="BottomSheetDialog"
+        tools:layout="@layout/bottom_sheet_layout"/>
+    <fragment
+        android:id="@+id/recommendationFragment"
+        android:name="com.example.vitainline.fragments.RecommendationFragment"
+        android:label="RecommendationFragment"
+        tools:layout="@layout/fragment_recomendation">
+        <action
+            android:id="@+id/action_recommendationFragment_to_fragmentRecHistoryFragment"
+            app:destination="@id/fragmentRecHistoryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentRecHistoryFragment"
+        android:name="com.example.vitainline.fragments.FragmentRecHistoryFragment"
+        android:label="FragmentRecHistoryFragment"
+        tools:layout="@layout/fragment_rec_history"/>
+    <fragment
+        android:id="@+id/medicinesFragment"
+        android:name="com.example.vitainline.fragments.MedicinesFragment"
+        android:label="fragment_medicines"
+        tools:layout="@layout/fragment_medicines" >
+        <action
+            android:id="@+id/action_medicinesFragment_to_aboutMedicinesFragment"
+            app:destination="@id/aboutMedicinesFragment" />
+        <argument
+            android:name="infos"
+            app:argType="com.example.vitainline.datas.MedicineItem[]" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutMedicinesFragment"
+        android:name="com.example.vitainline.fragments.AboutMedicinesFragment"
+        android:label="fragment_about_medicines"
+        tools:layout="@layout/fragment_about_medicines" />
+</navigation>
